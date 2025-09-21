@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COOPAC San Román</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="#inicio" class="logo">
+          <img src="img/logo.png" alt="Logo" style="height:48px;vertical-align:middle;">
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa (solo móviles) -->
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#nosotros">Nosotros ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#mision">Misión y Visión</a></li>
+            <li><a href="#valores">Valores</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Transparencia ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Estados Financieros</a></li>
+            <li><a href="#">Memorias Anuales</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Créditos ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Consumo</a></li>
+            <li><a href="#">MYPE</a></li>
+            <li><a href="#">Mi Vivienda</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Ahorros ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Plazo Fijo</a></li>
+            <li><a href="#">CTS</a></li>
+          </ul>
+        </li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Carrusel -->
+  <section class="hero">
+  <!-- Slides de fondo -->
+  <div class="hero-slide active" style="background-image: url('img/slide1.webp');"></div>
+  <div class="hero-slide" style="background-image: url('image.png');"></div>
+  <div class="hero-slide" style="background-image: url('img/slide3.webp');"></div>
+
+  <!-- Overlay oscuro -->
+  <div class="hero-overlay"></div>
+
+  <!-- Contenido centrado (texto) -->
+  <div class="hero-content">
+    <h1>Bienvenidos a COPACC</h1>
+    <p>Tu confianza, nuestro compromiso</p>
+  </div>
+
+  <!-- Flechas -->
+  <div class="hero-arrow left">&#10094;</div>
+  <div class="hero-arrow right">&#10095;</div>
+</section>
+
+  <!-- About -->
+  <section class="about container" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>COOPAC San Román es una cooperativa de ahorro y crédito ubicada en Juliaca, dedicada a brindar soluciones financieras responsables para nuestros socios y comunidad. Nos caracterizamos por la transparencia, confianza y compromiso con el desarrollo económico de la región.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services container" id="servicios">
+    <h2>Servicios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Ahorros</h3>
+        <p>Cuentas de ahorro flexibles y seguras.</p>
+      </div>
+      <div class="card">
+        <h3>Créditos</h3>
+        <p>Préstamos con tasas accesibles y justas.</p>
+      </div>
+      <div class="card">
+        <h3>Inversiones</h3>
+        <p>Opciones para que tu dinero crezca de manera segura.</p>
+      </div>
+      <div class="card">
+        <h3>Seguros</h3>
+        <p>Protege a tu familia y tu patrimonio con nuestros seguros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact container" id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Dirección:</strong> Callao 429, Juliaca 21104</p>
+    <p><strong>Teléfono:</strong> (051) 123-456</p>
+    <p><strong>Email:</strong> contacto@coopacsanroman.pe</p>
+
+    <form id="contactForm">
+      <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Enviar</button>
+      <p id="formMessage"></p>
+    </form>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=Callao+429,+Juliaca+21104&hl=es&z=15&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 COOPAC San Román - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
