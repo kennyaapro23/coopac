@@ -62,17 +62,27 @@ form.addEventListener('submit', function(e) {
 
 // ================= Hero Carrusel =================
 let heroSlides = document.querySelectorAll(".hero-slide");
+let dots = document.querySelectorAll(".hero-dot");
 let idx = 0;
 
 function showSlide(n) {
   heroSlides.forEach(s => s.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+
   idx = (n + heroSlides.length) % heroSlides.length;
+
   heroSlides[idx].classList.add("active");
+  dots[idx].classList.add("active");
 }
 
 // Flechas
 document.querySelector(".hero-arrow.left").addEventListener("click", () => showSlide(idx - 1));
 document.querySelector(".hero-arrow.right").addEventListener("click", () => showSlide(idx + 1));
+
+// Puntitos clickeables
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => showSlide(i));
+});
 
 // Automático cada 5 segundos
 setInterval(() => showSlide(idx + 1), 5000);
